@@ -1,4 +1,9 @@
 #include "TLC2543.h"
+
+/*
+版权所有:https://github.com/MisakaMikoto128/TLC2543_STM32
+作者：林愿留
+*/
 void TLC2543_Init()
 {
   GPIO_InitTypeDef GPIO_InitStructure;

@@ -3,7 +3,10 @@
 #include "sys.h"
 #include "usart.h"
 #include "TLC2543.h"
-
+/*
+版权所有:https://github.com/MisakaMikoto128/TLC2543_STM32
+作者：林愿留
+*/
 int main()
 {
 	delay_init();	    	 //延时函数初始化	  

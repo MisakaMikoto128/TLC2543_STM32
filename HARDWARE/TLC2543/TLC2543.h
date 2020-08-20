@@ -2,7 +2,10 @@
 #define _TLC2543_H_
 #include "sys.h"
 #include "spi.h"
-
+/*
+版权所有:https://github.com/MisakaMikoto128/TLC2543_STM32
+作者：林愿留
+*/
 //CPOL = 0
 //CPHA = 0
 
