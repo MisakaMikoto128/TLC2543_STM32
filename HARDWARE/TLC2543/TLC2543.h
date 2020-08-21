@@ -67,6 +67,10 @@ unsigned int TLC2543_ReadWirte(unsigned int ctrlcode);
 unsigned int TLC2543_Read(unsigned int channel);
 unsigned int TLC2543_Set(unsigned int ctrlcode);
 float TLC2543_Calvot(unsigned int ADCValue,int maxout);
-int TLC2543_readAll(unsigned char *pdata,int len);
+/*
+顺序读取指定数目的通道值到pdata,len-通道数，pdata-数据指针，默认16bit,保证pdata指向区域大小>=2*len
+*/
+int TLC2543_readAll(unsigned short *pdata,int len);
+
 
 #endif

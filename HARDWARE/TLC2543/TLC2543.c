@@ -56,11 +56,16 @@ float TLC2543_Calvot(unsigned int ADCValue,int maxout)
 }
 
 
-int TLC2543_readAll(unsigned char *pdata,int len)
+/*
+顺序读取指定数目的通道值到pdata,len-通道数，pdata-数据指针，默认16bit,保证pdata指向区域大小>=2*len
+*/
+int TLC2543_readAll(unsigned short *pdata,int len)
 {
+	len = (len <= TLC2543_CHANNELNUM)?len:TLC2543_CHANNELNUM;//范围限制
 	for(int i = 0; i < len; i++)
 	{
-		pdata[i] = TLC2543_Read(((AIN0 >> 4) + (unsigned char)i) << 4);
+		pdata[i] = (unsigned short)TLC2543_Read(AIN0  + ((unsigned char)i << 4));
 	}
 	return len;
 }
+
