@@ -19,7 +19,7 @@ void TLC2543_Init()
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; //浮空输入
  	GPIO_Init(GPIOB, &GPIO_InitStructure);
 
-	SPI2_Init();		   	//初始化SPI
+	SPI2_Init();		   		//初始化SPI
 	SPI2_SetSpeed(SPI_BaudRatePrescaler_256);//设置为18M时钟,高速模式
 }	
 

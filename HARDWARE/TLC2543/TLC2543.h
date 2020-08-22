@@ -9,6 +9,13 @@
 //CPOL = 0
 //CPHA = 0
 
+/*
+PP15	MOSI
+PP14	MISO
+PP13 	SCK
+PB12 	CS
+PB11 	EOC
+*/
 #define RF_VOT 4.98
 
 
